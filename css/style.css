@@ -1,17 +1,21 @@
-* {
+*, ::after, ::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #777777;
   line-height: 1.4;
-  letter-spacing: 2px;
-  padding: 50px;
+  letter-spacing: 0.2rem;
+  padding: 5rem;
   background-color: white;
 }
 
@@ -27,10 +31,10 @@ body {
 }
 .header__logo {
   position: absolute;
-  left: 50px;
-  top: 50px;
-  width: 56px;
-  height: 70px;
+  left: 5rem;
+  top: 5rem;
+  width: 5.6rem;
+  height: 7rem;
 }
 .header__box {
   position: absolute;
@@ -43,15 +47,15 @@ body {
 
 .title-first {
   color: #fff;
-  margin-bottom: 50px;
+  margin-bottom: 5rem;
 }
 .title-first__main {
   display: block;
   font-weight: 800;
-  font-size: 50px;
-  letter-spacing: 0.2em;
+  font-size: 5rem;
+  letter-spacing: 1rem;
   text-transform: uppercase;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
   animation: left-to-right;
   animation-duration: 1.7s;
   animation-delay: 1s;
@@ -61,8 +65,8 @@ body {
 .title-first__secondary {
   display: block;
   font-weight: 400;
-  font-size: 40px;
-  letter-spacing: 0.12em;
+  font-size: 4rem;
+  letter-spacing: 1rem;
   animation: right-to-left;
   animation-duration: 1.7s;
   animation-delay: 1s;
@@ -72,14 +76,15 @@ body {
 
 .btn {
   display: inline-block;
-  padding: 15px 40px;
-  border-radius: 50px;
+  padding: 1.5rem 4rem;
+  border-radius: 5rem;
   background-color: white;
   color: #777777;
   font-weight: 600;
-  font-size: 20px;
-  letter-spacing: 0.25em;
+  font-size: 2rem;
+  letter-spacing: 0.5rem;
   transition: transform 2s;
+  position: relative;
 }
 .btn:link, .btn:visited {
   text-decoration: none;
@@ -89,34 +94,65 @@ body {
   transform: translateY(-4px);
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.3);
 }
+.btn:hover::after {
+  opacity: 0;
+  transform: scaleX(3) scaleY(2);
+}
 .btn:active {
   transform: translateY(-2px);
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
 }
+.btn::after {
+  content: "";
+  display: inline-block;
+  border-radius: 5rem;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: transform 0.5s, opacity 0.5s;
+}
+.btn_animated {
+  animation: btn-to-up 0.7s ease-out 0.5s;
+  animation-fill-mode: backwards;
+}
 
-@keyframes left-to-right {
+@keyframes btn-to-up {
   0% {
     opacity: 0;
-    transform: translateX(-100px);
-  }
-  80% {
-    transform: translateX(10px);
+    transform: translateY(5rem);
   }
   100% {
     opacity: 1;
-    transform: translateX(0px);
+    transform: translateY(0rem);
+  }
+}
+@keyframes left-to-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  80% {
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0rem);
   }
 }
 @keyframes right-to-left {
   0% {
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(10rem);
   }
   80% {
-    transform: translateX(-10px);
+    transform: translateX(-1rem);
   }
   100% {
     opacity: 1;
-    transform: translateX(0px);
+    transform: translateX(0rem);
   }
 }/*# sourceMappingURL=style.css.map */
