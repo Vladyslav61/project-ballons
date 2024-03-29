@@ -1,0 +1,47 @@
+.btn
+  display: inline-block
+  padding: 1.5rem 4rem
+  border-radius: 5rem
+  // background-color: $color_white
+  // color: $color_gray
+  @include color-scheme($color_white, $color_gray)
+
+  font-weight: 600
+  font-size: 2rem
+  // letter-spacing: 0.25em
+  letter-spacing: .5rem
+  transition: transform 2s
+  position: relative
+
+  &:link, &:visited
+    text-decoration: none
+    text-transform: uppercase
+    // transition: transform 2s
+  &:hover
+    transform: translateY(-.4rem)
+    // box-shadow: 0 .4rem .4rem 0 rgba($color_black, 0.3)
+    box-shadow: $box-shadow
+    // transition: transform 2s
+    &::after
+      opacity: 0
+      transform: scaleX(1.5) scaleY(1.7)
+  &:active
+    transform: translateY(-.2rem)
+    box-shadow: 0 .4rem .4rem 0 rgba($color_black, 0.1)
+    // transition: transform 2s
+  &::after
+    content: ''
+    display: inline-block
+    border-radius: 5rem
+    width: 100%
+    height: 100%
+    // background-color: red
+    background-color: $color_white
+    position: absolute
+    top: 0
+    left: 0
+    z-index: -1
+    transition: transform .5s, opacity .5s
+  &_animated
+    animation: btn-to-up .7s ease-out .5s
+    animation-fill-mode: backwards

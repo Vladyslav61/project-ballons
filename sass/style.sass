@@ -1,144 +1,177 @@
-*, ::after, ::before
-  margin: 0
-  padding: 0
-  box-sizing: border-box
-html
-  // font-size: 10px
-  font-size: 62.5%
-body
-  font-family: "Lato", sans-serif
-  font-weight: 400
-  font-size: 1.6rem
-  color: #777777
-  line-height: 1.4
-  letter-spacing: .2rem
-  padding: 5rem
-  background-color: white
+@import "abstracts/variable.sass"
 
-.container
-  background-color: #F7F7F7
-.header
-  position: relative
-  height: 95vh
-  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0%, rgba(1, 1, 1, 0.7) 100%), url(../img/header-background.jpg) no-repeat center / cover
-  // background-size: cover 
-  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 80%)
-  &__logo
-    position: absolute
-    left: 5rem
-    top: 5rem
-    width: 5.6rem
-    height: 7rem
-  &__box
-    // My method
-    // width: 72%
-    // margin: 0 auto
-    // position: relative
-    position: absolute
-    width: 100%
-    text-align: center
-    top: 50%
-    left: 50%
-    // translate: 0 -50%
-    transform: translate(-50%, -50%)
-.title-first
-  color: #fff
-  margin-bottom: 5rem
-  &__main
-    display: block
-    font-weight: 800
-    font-size: 5rem
-    // letter-spacing: 0.2em
-    letter-spacing: 1rem
-    text-transform: uppercase
-    margin-bottom: 1rem
-    // My method
-    // text-align: center
-    animation: left-to-right
-    animation-duration: 1.7s
-    animation-delay: 1s
-    animation-timing-function: ease
-    backface-visibility: hidden
-  &__secondary
-    display: block
-    font-weight: 400
-    font-size: 4rem
-    // letter-spacing: 0.12em
-    letter-spacing: 1rem
-    // My method
-    // text-align: center
-    animation: right-to-left
-    animation-duration: 1.7s
-    animation-delay: 1s
-    animation-timing-function: ease
-    backface-visibility: hidden
-.btn
-  display: inline-block
-  padding: 1.5rem 4rem
-  border-radius: 5rem
-  background-color: white
-  color: #777777
-  font-weight: 600
-  font-size: 2rem
-  // letter-spacing: 0.25em
-  letter-spacing: .5rem
-  transition: transform 2s
-  position: relative
+// $color_light-brown: #BA8554
+// $color_dark-brown: #A14F03
+// $color_gray: #777777
+// $color_white: #ffffff
+// $color_black: #000000
 
-  &:link, &:visited
-    text-decoration: none
-    text-transform: uppercase
-    // transition: transform 2s
-  &:hover
-    transform: translateY(-4px)
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.3)
-    // transition: transform 2s
-    &::after
-      opacity: 0
-      transform: scaleX(3) scaleY(2)
-  &:active
-    transform: translateY(-2px)
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1)
-    // transition: transform 2s
-  &::after
-    content: ''
-    display: inline-block
-    border-radius: 5rem
-    width: 100%
-    height: 100%
-    // background-color: red
-    background-color: white
-    position: absolute
-    top: 0
-    left: 0
-    z-index: -1
-    transition: transform .5s, opacity .5s
-  &_animated
-    animation: btn-to-up .7s ease-out .5s
-    animation-fill-mode: backwards
+// $box-shadow: 0 .4rem .4rem 0 rgba($color_black, 0.3)
+// *************************
 
-@keyframes btn-to-up
-  0%
-    opacity: 0
-    transform: translateY(5rem)
-  100%
-    opacity: 1
-    transform: translateY(0rem)
-@keyframes left-to-right
-  0%
-    opacity: 0
-    transform: translateX(-10rem)
-  80%
-    transform: translateX(1rem)
-  100%
-    opacity: 1
-    transform: translateX(0rem)
-@keyframes right-to-left
-  0%
-    opacity: 0
-    transform: translateX(10rem)
-  80%
-    transform: translateX(-1rem)
-  100%
-    opacity: 1
-    transform: translateX(0rem)
+@import "abstracts/mixins.sass"
+// @mixin color-scheme($color_background, $color_text)
+//   background-color: $color_background
+//   color: $color_text
+// *************************
+
+@import "base/base.sass"
+// *, ::after, ::before
+//   margin: 0
+//   padding: 0
+//   box-sizing: border-box
+// html
+//   // font-size: 10px
+//   font-size: 62.5%
+// body
+//   font-family: "Lato", sans-serif
+//   font-weight: 400
+//   font-size: 1.6rem
+//   color: $color_gray
+//   line-height: 1.4
+//   letter-spacing: .2rem
+//   padding: 5rem
+//   background-color: $color_white
+// .container
+//   background-color: #F7F7F7
+// ******************************
+
+@import "layout/header.sass"
+// .header
+//   position: relative
+//   height: 95vh
+//   background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0%, rgba($color_black, 0.7) 100%), url(../img/header-background.jpg) no-repeat center / cover
+//   // background-size: cover 
+//   clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 80%)
+//   &__logo
+//     position: absolute
+//     left: 5rem
+//     top: 5rem
+//     width: 5.6rem
+//     height: 7rem
+//   &__box
+//     // My method
+//     // width: 72%
+//     // margin: 0 auto
+//     // position: relative
+//     position: absolute
+//     width: 100%
+//     text-align: center
+//     top: 50%
+//     left: 50%
+//     // translate: 0 -50%
+//     transform: translate(-50%, -50%)
+// ***************************
+
+@import "base/typography.sass"
+// .title-first
+//   color: $color_white
+//   margin-bottom: 5rem
+//   &__main
+//     display: block
+//     font-weight: 800
+//     font-size: 5rem
+//     // letter-spacing: 0.2em
+//     letter-spacing: 1rem
+//     text-transform: uppercase
+//     margin-bottom: 1rem
+//     // My method
+//     // text-align: center
+//     animation: left-to-right
+//     animation-duration: 1.7s
+//     animation-delay: 1s
+//     animation-timing-function: ease
+//     backface-visibility: hidden
+//   &__secondary
+//     display: block
+//     font-weight: 400
+//     font-size: 4rem
+//     // letter-spacing: 0.12em
+//     letter-spacing: 1rem
+//     // My method
+//     // text-align: center
+//     animation: right-to-left
+//     animation-duration: 1.7s
+//     animation-delay: 1s
+//     animation-timing-function: ease
+//     backface-visibility: hidden
+// *********************
+
+@import "components/button.sass"
+// .btn
+//   display: inline-block
+//   padding: 1.5rem 4rem
+//   border-radius: 5rem
+//   // background-color: $color_white
+//   // color: $color_gray
+//   @include color-scheme($color_white, $color_gray)
+
+//   font-weight: 600
+//   font-size: 2rem
+//   // letter-spacing: 0.25em
+//   letter-spacing: .5rem
+//   transition: transform 2s
+//   position: relative
+
+//   &:link, &:visited
+//     text-decoration: none
+//     text-transform: uppercase
+//     // transition: transform 2s
+//   &:hover
+//     transform: translateY(-.4rem)
+//     // box-shadow: 0 .4rem .4rem 0 rgba($color_black, 0.3)
+//     box-shadow: $box-shadow
+//     // transition: transform 2s
+//     &::after
+//       opacity: 0
+//       transform: scaleX(1.5) scaleY(1.7)
+//   &:active
+//     transform: translateY(-.2rem)
+//     box-shadow: 0 .4rem .4rem 0 rgba($color_black, 0.1)
+//     // transition: transform 2s
+//   &::after
+//     content: ''
+//     display: inline-block
+//     border-radius: 5rem
+//     width: 100%
+//     height: 100%
+//     // background-color: red
+//     background-color: $color_white
+//     position: absolute
+//     top: 0
+//     left: 0
+//     z-index: -1
+//     transition: transform .5s, opacity .5s
+//   &_animated
+//     animation: btn-to-up .7s ease-out .5s
+//     animation-fill-mode: backwards
+// **********************************
+
+@import "base/animation.sass"
+
+// @keyframes btn-to-up
+//   0%
+//     opacity: 0
+//     transform: translateY(5rem)
+//   100%
+//     opacity: 1
+//     transform: translateY(0rem)
+// @keyframes left-to-right
+//   0%
+//     opacity: 0
+//     transform: translateX(-10rem)
+//   80%
+//     transform: translateX(1rem)
+//   100%
+//     opacity: 1
+//     transform: translateX(0rem)
+// @keyframes right-to-left
+//   0%
+//     opacity: 0
+//     transform: translateX(10rem)
+//   80%
+//     transform: translateX(-1rem)
+//   100%
+//     opacity: 1
+//     transform: translateX(0rem)
+// *****************************
