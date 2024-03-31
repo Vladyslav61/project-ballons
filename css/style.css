@@ -74,6 +74,23 @@ body {
   backface-visibility: hidden;
 }
 
+.title-secondary {
+  display: inline-block;
+  font-size: 3.6rem;
+  font-weight: 800;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #c3956a 3.65%, #A14F03 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.4s;
+  backface-visibility: hidden;
+}
+.title-secondary:hover {
+  transform: skewX(2deg) skewY(2deg) scale(1.07);
+  text-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+}
+
 .btn {
   display: inline-block;
   padding: 1.5rem 4rem;
@@ -155,4 +172,61 @@ body {
     opacity: 1;
     transform: translateX(0rem);
   }
+}
+.section-about {
+  padding-top: 8rem;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.margin-bottom-80rem {
+  margin-bottom: 8rem;
+}
+
+.row {
+  max-width: 114rem;
+  background: #d8f57f;
+  margin: 0 auto;
+}
+.row:not(:last-child) {
+  margin-bottom: 8rem;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class^=col-] {
+  background: #e08787;
+  float: left;
+}
+[class^=col-]:not(:last-child) {
+  margin-right: 6rem;
+}
+
+.col-1-of-2 {
+  width: calc((100% - 6rem) / 2);
+}
+
+.col-1-of-3 {
+  width: calc((100% - 2 * 6rem) / 3);
+}
+
+.col-2-of-3 {
+  width: calc((100% - 2 * 6rem) / 3 * 2 + 6rem);
+}
+
+.col-1-of-4 {
+  width: calc((100% - 3 * 6rem) / 4);
+}
+
+.col-2-of-4 {
+  width: calc((100% - 3 * 6rem) / 2 + 6rem);
+}
+
+.col-3-of-4 {
+  width: calc((100% - 3 * 6rem) / 4 * 3 + 2 * 6rem);
 }/*# sourceMappingURL=style.css.map */
