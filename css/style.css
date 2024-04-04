@@ -356,6 +356,8 @@ body {
   width: 100%;
   backface-visibility: hidden;
   box-shadow: 0 15px 40px 0 rgba(0, 0, 0, 0.15), 0 4px 4px 0 rgba(0, 0, 0, 0.25), 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 0.5rem;
+  overflow: hidden;
 }
 .card-tour__side_back {
   background: linear-gradient(135deg, #c3956a 3.65%, #A14F03 100%);
@@ -370,9 +372,17 @@ body {
 .card-tour__img {
   height: 21rem;
   background-blend-mode: hard-light;
-  background: #BA8554 url(../img/popular-tour-1.jpg) no-repeat center/cover;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 83%);
   margin-bottom: 5.4rem;
+}
+.card-tour__img_card-1 {
+  background: #BA8554 url(../img/popular-tour-1.jpg) no-repeat center/cover;
+}
+.card-tour__img_card-2 {
+  background: #BA8554 url(../img/popular-tour-2.jpg) no-repeat center/cover;
+}
+.card-tour__img_card-3 {
+  background: #BA8554 url(../img/popular-tour-3.jpg) no-repeat center/cover;
 }
 .card-tour__title {
   font-size: 2rem;
@@ -411,4 +421,25 @@ body {
 }
 .card-tour__descr ul li:not(:last-child) {
   margin-bottom: 2rem;
+}
+.card-tour__backside-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.card-tour__text {
+  margin-bottom: 8rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+}
+.card-tour__text_1 {
+  font-weight: 300;
+  font-size: 1.6rem;
+}
+.card-tour__text_2 {
+  font-weight: 600;
+  font-size: 6rem;
 }/*# sourceMappingURL=style.css.map */

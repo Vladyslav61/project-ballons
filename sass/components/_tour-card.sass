@@ -15,6 +15,8 @@
     width: 100%
     backface-visibility: hidden
     box-shadow: 0 15px 40px 0 rgba($color_black, 0.15), 0 4px 4px 0 rgba($color_black, 0.25), 0 4px 4px 0 rgba($color_black, 0.25)
+    border-radius: .5rem
+    overflow: hidden
     &_front
       // background: green
       // &:hover
@@ -31,9 +33,15 @@
   &__img
     height: 21rem
     background-blend-mode: hard-light
-    background: $color_light-brown url(../img/popular-tour-1.jpg) no-repeat center / cover
+    // background: $color_light-brown url(../img/popular-tour-1.jpg) no-repeat center / cover
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 83%)
     margin-bottom: 5.4rem
+    &_card-1
+      background: $color_light-brown url(../img/popular-tour-1.jpg) no-repeat center / cover
+    &_card-2
+      background: $color_light-brown url(../img/popular-tour-2.jpg) no-repeat center / cover
+    &_card-3
+      background: $color_light-brown url(../img/popular-tour-3.jpg) no-repeat center / cover
   &__title
     font-size: 2rem
     letter-spacing: .2rem
@@ -68,3 +76,20 @@
         display: inline-block
         &:not(:last-child)
           margin-bottom: 2rem
+  &__backside-wrapper
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+  &__text
+    margin-bottom: 8rem
+    letter-spacing: 0.2rem
+    text-transform: uppercase
+    text-align: center
+    color: $color_white
+    &_1
+      font-weight: 300
+      font-size: $font-size-paragraph
+    &_2
+      font-weight: 600
+      font-size: 6rem
