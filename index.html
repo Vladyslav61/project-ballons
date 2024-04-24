@@ -15,6 +15,34 @@
   </head>
   <body>
     <div class="container">
+      <div class="navigation">
+        <input type="checkbox" id="navi-toggle" class="navigation__toggle" />
+        <label for="navi-toggle" class="navigation__button">
+          <span class="navigation__icon"> </span>
+        </label>
+        <div class="navigation__background"></div>
+        <div class="navigation__nav">
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">О НАС</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">СКИДКИ</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">ЛУЧШИЕ ТУРЫ</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">КАЛЬКУЛЯТОР ЦЕНЫ</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">СВЯЗАТЬСЯ С НАМИ</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- /.navigation -->
+
       <header class="header">
         <img src="./icons/Icon-logo.svg" alt="Logo" class="header__logo" />
         <div class="header__box">
@@ -260,6 +288,11 @@
           </div>
         </section>
         <section class="section-feedback">
+          <video class="bg-video" autoplay loop muted>
+            <source src="./video/coverr-hot-air-balloons.mp4" />
+            <source src="./video/coverr-hot-air-balloons.webm" />
+          </video>
+          <div class="bg-gradient"></div>
           <div class="text-align-center margin-bottom-8rem">
             <h2 class="title-secondary title-secondary_white">
               ОТЗЫВЫ НАШИХ КЛИЕНТОВ
@@ -269,6 +302,7 @@
             <div class="feedback-card">
               <figure class="feedback-card__img">
                 <img src="./img/person-1.jpg" alt="person 1" />
+                <figcaption class="feedback-card__name">АНТОН РЯБИН</figcaption>
               </figure>
               <div class="feedback-card__box">
                 <h3 class="title-third margin-bottom-1rem">
@@ -289,6 +323,9 @@
             <div class="feedback-card">
               <figure class="feedback-card__img">
                 <img src="./img/person-2.jpg" alt="person 2" />
+                <figcaption class="feedback-card__name">
+                  ЛИЗА ФРОЛОВА
+                </figcaption>
               </figure>
               <div class="feedback-card__box">
                 <h3 class="title-third margin-bottom-1rem">
@@ -308,7 +345,85 @@
             <a href="#" class="btn btn_animated">ЗАБРОНИРОВАТЬ</a>
           </div>
         </section>
+        <div class="section-book">
+          <div class="row">
+            <div class="book">
+              <div class="book__form">
+                <form action="#" class="form">
+                  <div class="text-align-center form__title">
+                    <h2 class="title-secondary">ЗАБРОНИРОВАТЬ ТУР</h2>
+                  </div>
+                  <div class="form__group">
+                    <input
+                      type="text"
+                      class="form__input"
+                      placeholder="First name, second name"
+                      id="name"
+                      required
+                    />
+                    <label for="name" class="form__label"
+                      >Enter your name</label
+                    >
+                  </div>
+                  <div class="form__group">
+                    <input
+                      type="email"
+                      class="form__input"
+                      id="email"
+                      placeholder="email"
+                      required
+                    />
+                    <label for="email" class="form__label">Your email</label>
+                  </div>
+                  <div class="form__group">
+                    <div class="form__group-radio">
+                      <input
+                        type="radio"
+                        id="tour-1"
+                        class="form__input-radio"
+                        name="check"
+                      />
+                      <label for="tour-1" class="form__label-radio"
+                        ><span class="form__button-radio"></span>Групповой
+                        тур</label
+                      >
+                    </div>
+                    <div class="form__group-radio">
+                      <input
+                        type="radio"
+                        id="tour-2"
+                        class="form__input-radio"
+                        name="check"
+                      />
+                      <label for="tour-2" class="form__label-radio"
+                        ><span class="form__button-radio"></span>Индивидуальный
+                        тур</label
+                      >
+                    </div>
+                  </div>
+                  <div class="form__group">
+                    <button class="btn btn_brown">ЗАБРОНИРОВАТЬ</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
+      <div class="footer">
+        <a href="#"
+          ><img src="./icons/Icon-logo.svg" alt="Logo" class="footer__logo"
+        /></a>
+        <nav class="footer__menu">
+          <ul class="footer__menu-list">
+            <li class="footer__menu-item"><a href="#">О НАС</a></li>
+            <li class="footer__menu-item"><a href="#">СКИДКИ</a></li>
+            <li class="footer__menu-item"><a href="#">ЛУЧШИЕ ТУРЫ</a></li>
+            <li class="footer__menu-item"><a href="#">КАЛЬКУЛЯТОР ЦЕНЫ</a></li>
+            <li class="footer__menu-item"><a href="#">СВЯЗАТЬСЯ С НАМИ</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
 
     <!-- <section class="grid-test">

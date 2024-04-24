@@ -1,17 +1,19 @@
 .btn
-  display: inline-block
-  padding: 1.5rem 4rem
-  border-radius: 5rem
-  // background-color: $color_white
-  // color: $color_gray
-  @include color-scheme($color_white, $color_gray)
+  &, &:link, &:visited
+    display: inline-block
+    padding: 1.5rem 4rem
+    border-radius: 5rem
+    // background-color: $color_white
+    // color: $color_gray
+    @include color-scheme($color_white, $color_gray)
 
-  font-weight: 600
-  font-size: 2rem
-  // letter-spacing: 0.25em
-  letter-spacing: .5rem
-  transition: transform 2s
-  position: relative
+    font-weight: 600
+    font-size: 2rem
+    // letter-spacing: 0.25em
+    letter-spacing: .5rem
+    transition: transform .3s
+    position: relative
+    border: none
 
   &:link, &:visited
     text-decoration: none
@@ -41,7 +43,13 @@
     top: 0
     left: 0
     z-index: -1
-    transition: transform .5s, opacity .5s
+    transition: transform .3s, opacity .3s
   &_animated
     animation: btn-to-up .7s ease-out .5s
     animation-fill-mode: backwards
+.btn_brown
+  &, &:link, &:visited
+    background: $color_dark-brown
+    color: $color_white
+  &::after
+    background: $color_dark-brown
