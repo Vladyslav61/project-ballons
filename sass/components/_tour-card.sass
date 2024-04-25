@@ -76,6 +76,8 @@
         display: inline-block
         &:not(:last-child)
           margin-bottom: 2rem
+        @include respond(tab-land)
+          font-size: 1.4rem
   &__backside-wrapper
     position: absolute
     top: 50%

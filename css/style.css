@@ -16,7 +16,7 @@
 html {
   font-size: 62.5%;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1290px) {
   html {
     font-size: 56.25%;
   }
@@ -74,6 +74,11 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+@media screen and (max-width: 1290px) {
+  .header__box {
+    top: 55%;
+  }
+}
 
 .title-first {
   color: #ffffff;
@@ -92,6 +97,11 @@ body {
   animation-timing-function: ease;
   backface-visibility: hidden;
 }
+@media screen and (max-width: 1290px) {
+  .title-first__main {
+    font-size: 4rem;
+  }
+}
 .title-first__secondary {
   display: block;
   font-weight: 400;
@@ -102,6 +112,12 @@ body {
   animation-delay: 1s;
   animation-timing-function: ease;
   backface-visibility: hidden;
+}
+@media screen and (max-width: 1290px) {
+  .title-first__secondary {
+    font-size: 3rem;
+    margin-bottom: 4rem;
+  }
 }
 
 .title-secondary {
@@ -125,6 +141,11 @@ body {
   color: #ffffff;
   -webkit-text-fill-color: initial;
 }
+@media screen and (max-width: 1290px) {
+  .title-secondary {
+    font-size: 3rem;
+  }
+}
 
 .title-third {
   font-size: 2rem;
@@ -132,12 +153,22 @@ body {
   letter-spacing: 0.2rem;
   text-transform: uppercase;
 }
+@media screen and (max-width: 1290px) {
+  .title-third {
+    font-size: 1.8rem;
+  }
+}
 
 .paragraph {
   font-size: 1.6rem;
   font-weight: 400;
   letter-spacing: 0.2rem;
   line-height: 140%;
+}
+@media screen and (max-width: 1290px) {
+  .paragraph {
+    font-size: 1.5rem;
+  }
 }
 
 .btn, .btn:link, .btn:visited {
@@ -152,6 +183,12 @@ body {
   transition: transform 0.3s;
   position: relative;
   border: none;
+}
+@media screen and (max-width: 1290px) {
+  .btn, .btn:link, .btn:visited {
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+  }
 }
 .btn:link, .btn:visited {
   text-decoration: none;
@@ -235,6 +272,11 @@ body {
   padding-top: 8rem;
   margin-bottom: 15.3rem;
 }
+@media screen and (max-width: 1290px) {
+  .section-about {
+    margin-bottom: 12rem;
+  }
+}
 
 .section-cards-about {
   padding: 25rem 0;
@@ -243,6 +285,11 @@ body {
 }
 .section-cards-about > * {
   transform: skewY(-7deg);
+}
+@media screen and (max-width: 1290px) {
+  .section-cards-about {
+    padding: 15rem 0;
+  }
 }
 
 .section-tour {
@@ -288,12 +335,22 @@ body {
   clear: both;
   display: table;
 }
+@media screen and (max-width: 1290px) {
+  .row {
+    max-width: 84rem;
+  }
+}
 
 [class^=col-] {
   float: left;
 }
 [class^=col-]:not(:last-child) {
   margin-right: 6rem;
+}
+@media screen and (max-width: 1290px) {
+  [class^=col-]:not(:last-child) {
+    margin-right: 2rem;
+  }
 }
 
 .col-1-of-2 {
@@ -303,6 +360,11 @@ body {
 .col-1-of-3 {
   width: calc((100% - 2 * 6rem) / 3);
 }
+@media screen and (max-width: 1290px) {
+  .col-1-of-3 {
+    width: calc((100% - 2 * 2rem) / 3);
+  }
+}
 
 .col-2-of-3 {
   width: calc((100% - 2 * 6rem) / 3 * 2 + 6rem);
@@ -310,6 +372,11 @@ body {
 
 .col-1-of-4 {
   width: calc((100% - 3 * 6rem) / 4);
+}
+@media screen and (max-width: 1290px) {
+  .col-1-of-4 {
+    width: calc((100% - 3 * 2rem) / 4);
+  }
 }
 
 .col-2-of-4 {
@@ -478,6 +545,11 @@ body {
 .card-tour__descr ul li:not(:last-child) {
   margin-bottom: 2rem;
 }
+@media screen and (max-width: 1290px) {
+  .card-tour__descr ul li {
+    font-size: 1.4rem;
+  }
+}
 .card-tour__backside-wrapper {
   position: absolute;
   top: 50%;
@@ -575,14 +647,24 @@ body {
 }
 
 .form {
-  width: 65%;
+  width: 74%;
   padding: 5rem;
 }
 .form__title {
   margin-bottom: 3rem;
 }
+@media screen and (max-width: 1290px) {
+  .form__title {
+    margin-bottom: 2rem;
+  }
+}
 .form__group:not(:last-child) {
   margin-bottom: 2rem;
+}
+@media screen and (max-width: 1290px) {
+  .form__group:not(:last-child) {
+    margin-bottom: 0;
+  }
 }
 .form__group:nth-child(4) {
   margin-bottom: 3rem;
@@ -622,7 +704,17 @@ body {
 }
 .form__group-radio {
   display: inline-block;
-  width: 40%;
+}
+.form__group-radio:not(:last-child) {
+  margin-right: 4rem;
+}
+@media screen and (max-width: 1290px) {
+  .form__group-radio {
+    display: block;
+  }
+  .form__group-radio:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
 }
 .form__label-radio {
   cursor: pointer;
@@ -677,6 +769,11 @@ body {
   display: flex;
   justify-content: center;
   gap: 5rem;
+}
+@media screen and (max-width: 1290px) {
+  .footer__menu-list {
+    gap: 2rem;
+  }
 }
 .footer__menu-item a {
   display: inline-block;
