@@ -535,6 +535,11 @@ body {
   -webkit-perspective: 150rem;
   position: relative;
 }
+@media screen and (max-width: 900px) {
+  .card-tour {
+    height: auto;
+  }
+}
 .card-tour__side {
   color: #ffffff;
   height: 50rem;
@@ -548,12 +553,37 @@ body {
   border-radius: 0.5rem;
   overflow: hidden;
 }
+@media screen and (max-width: 900px) {
+  .card-tour__side {
+    height: auto;
+    position: relative;
+  }
+}
+@media screen and (max-width: 900px) {
+  .card-tour__side_front {
+    padding-bottom: 10rem;
+  }
+}
 .card-tour__side_back {
   background: linear-gradient(135deg, #c3956a 3.65%, #A14F03 100%);
   transform: rotateY(180deg);
 }
+@media screen and (max-width: 900px) {
+  .card-tour__side_back {
+    transform: rotate(0deg);
+    padding: 5rem;
+    padding-top: 12rem;
+    margin-top: -4rem;
+    clip-path: polygon(0 0, 100% 7%, 100% 100%, 0 100%);
+  }
+}
 .card-tour:hover .card-tour__side_front {
   transform: rotateY(-180deg);
+}
+@media screen and (max-width: 900px) {
+  .card-tour:hover .card-tour__side_front {
+    transform: rotate(0deg);
+  }
 }
 .card-tour:hover .card-tour__side_back {
   transform: rotateY(0deg);
@@ -644,6 +674,15 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 900px) {
+  .card-tour__backside-wrapper {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    text-align: center;
+  }
 }
 .card-tour__text {
   margin-bottom: 8rem;
