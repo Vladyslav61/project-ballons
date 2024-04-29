@@ -1,0 +1,108 @@
+.book
+  height: 50rem
+  background: linear-gradient(109deg, rgba($color_white, 0.9) 0%, rgba($color_white, 0.9) 56%, rgba($color_light-brown, 0.3) 56%, rgba($color_dark-brown, 0.3) 100%), url(../img/bg-book.jpg) center / cover no-repeat
+  box-shadow: $box-shadow
+  border-radius: 0.5rem
+  overflow: hidden
+
+.form
+  width: 74%
+  padding: 5rem
+  @include respond(tab-port)
+    padding: 3rem
+    width: 80%
+  &__title
+    margin-bottom: 3rem
+    @include respond(tab-land)
+      margin-bottom: 2rem
+
+  &__group:not(:last-child)
+    margin-bottom: 2rem
+
+  &__group:nth-child(4)
+    margin-bottom: 3rem
+
+  @include respond(tab-land)
+    &__group:not(:last-child)
+      margin-bottom: 0rem
+    &__group:nth-child(4)
+      margin-bottom: 2.5rem
+
+  &__input
+    font-size: $font-size-paragraph
+    letter-spacing: 0.2rem
+    color: $color_black
+    padding: 1.8rem 0 1.8rem 2rem
+    background: $color_white
+    border: none
+    border-radius: 0.5rem
+    border-bottom: 0.3rem solid transparent
+    width: 70%
+    margin-bottom: 1rem
+    &:focus
+      outline: none
+      border-bottom: 0.3rem solid #66d763
+      box-shadow: $box-shadow
+      &:invalid
+        border-bottom: 0.3rem solid #d76363
+
+  &__label
+    font-size: $font-size-paragraph
+    letter-spacing: 0.2rem
+    color: #777
+    display: block
+    margin-left: 1.5rem
+    transition: 0.2s
+
+  &__input:placeholder-shown + &__label
+    opacity: 0
+    visibility: hidden
+    transform: translateY(3rem)
+
+  &__group-radio
+    display: inline-block
+    // width: 40%;
+    &:not(:last-child)
+      margin-right: 4rem
+
+    @include respond(tab-land)
+      display: block
+      &:not(:last-child)
+        margin-bottom: 1.5rem
+
+  &__label-radio
+    cursor: pointer
+    position: relative
+    padding-left: 4rem
+
+  &__button-radio
+    width: 3rem
+    height: 3rem
+    border: 0.5rem solid $color_dark-brown
+    border-radius: 50%
+    display: inline-block
+    position: absolute
+    top: -0.5rem
+    left: 0rem
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    &::after
+      content: ""
+      display: block
+      width: 1.5rem
+      height: 1.5rem
+      border-radius: 50%
+      background: $color_dark-brown
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      opacity: 0
+
+  &__input-radio:checked ~ &__label-radio > &__button-radio::after
+    opacity: 1
+    transition: 0.2s
+
+  &__input-radio
+    display: none
