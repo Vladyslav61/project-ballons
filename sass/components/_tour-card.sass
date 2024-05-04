@@ -5,7 +5,8 @@
   -moz-perspective: 150rem
   -webkit-perspective: 150rem
   position: relative
-  @include respond(tab-port)
+  // @include respond(tab-port)
+  @media only screen and ( max-width: 900px ), (hover: none)
     height: auto
   &__side
     color: $color_white
@@ -19,14 +20,17 @@
     box-shadow: 0 15px 40px 0 rgba($color_black, 0.15), 0 4px 4px 0 rgba($color_black, 0.25), 0 4px 4px 0 rgba($color_black, 0.25)
     border-radius: .5rem
     overflow: hidden
-    @include respond(tab-port)
+    // @include respond(tab-port)
+    @media only screen and ( max-width: 900px ), (hover: none)
       height: auto
       position: relative
     &_front
       // background: green
       // &:hover
       //   transform: rotateY(180deg)
-      @include respond(tab-port)
+
+      // @include respond(tab-port)
+      @media only screen and ( max-width: 900px ), (hover: none)
         padding-bottom: 10rem
     &_back
       background: linear-gradient(135deg, #c3956a 3.65%, $color_dark-brown 100%)
@@ -34,7 +38,8 @@
       // &:hover
       //   transform: rotateY(0deg)
 
-      @include respond(tab-port)
+      // @include respond(tab-port)
+      @media only screen and ( max-width: 900px ), (hover: none)
         transform: rotate(0deg)
         padding: 5rem
         padding-top: 12rem
@@ -42,7 +47,8 @@
         clip-path: polygon(0 0, 100% 7%, 100% 100%, 0 100%)
   &:hover &__side_front
     transform: rotateY(-180deg)
-    @include respond(tab-port)
+    // @include respond(tab-port)
+    @media only screen and ( max-width: 900px ), (hover: none)
       transform: rotate(0deg)
   &:hover &__side_back
     transform: rotateY(0deg)
@@ -111,7 +117,8 @@
     top: 50%
     left: 50%
     transform: translate(-50%, -50%)
-    @include respond(tab-port)
+    // @include respond(tab-port)
+    @media only screen and ( max-width: 900px ), (hover: none)
       position: relative
       top: 0
       left: 0

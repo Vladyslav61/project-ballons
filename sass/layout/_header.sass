@@ -4,6 +4,9 @@
   background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0%, rgba($color_black, 0.7) 100%), url(../img/header-background.jpg) no-repeat center / cover
   // background-size: cover 
   clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 80%)
+  @media ( min-resolution: 192dpi ) and (min-width: 670px), (min-width: 1340px)
+    background: linear-gradient(90deg, rgba($color_black, 0.7) 0%, rgba($color_white, 0.7) 100%), url(../img/header-background-big.jpg) no-repeat center / cover
+
   &__logo
     position: absolute
     left: 5rem
